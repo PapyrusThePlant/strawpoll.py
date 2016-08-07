@@ -1,7 +1,7 @@
 """
 An async python wrapper for the Strawpoll API.
 
-:copyright: 2016 Papyrus
+:copyright: 2016 PapyrusThePlant
 :license: MIT, see LICENSE for more details.
 """
 

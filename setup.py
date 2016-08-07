@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-:copyright: 2016 Papyrus
+:copyright: 2016 PapyrusThePlant
 :license: MIT, see LICENSE for more details.
 """
 
