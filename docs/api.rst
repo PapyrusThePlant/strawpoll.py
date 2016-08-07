@@ -1,14 +1,17 @@
+.. |coroutine| replace:: This function is a |corolink|_.
+.. |corolink| replace:: **coroutine**
+.. _corolink: :ref:`coroutineAnchor_`
+
 .. module:: strawpoll
 
 API reference
 =============
 
-A basic wrapper for the Strawpoll API.
+An async python wrapper for the Strawpoll API.
 
 Version info
 ------------
 
-.. _vinfo:
 .. py:data:: version_info
 
     A named tuple containing the five components of the version number in a
@@ -39,8 +42,3 @@ Exceptions
 .. autoexception:: ExistingPoll
 .. autoexception:: HTTPException
     :members:
-
-
-.. |coroutine| replace:: This function is a |corolink|_.
-.. |corolink| replace:: **coroutine**
-.. _corolink: :ref:`coroutineAnchor_`

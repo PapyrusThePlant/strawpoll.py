@@ -2,9 +2,17 @@
 strawpoll.py
 ============
 
+|docbadge|_
+
 strawpoll.py is an async wrapper for `strawpoll's API`_ written in Python.
 
+For more info, take a look at the documentation_.
+
+.. |docbadge| image:: https://readthedocs.org/projects/strawpollpy/badge/
+.. _docbadge: documentation_
+
 .. _strawpoll's API:  https://strawpoll.zendesk.com/hc/en-us/articles/218979828-Straw-Poll-API-Information
+.. _documentation: http://strawpollpy.readthedocs.io/
 
 Requirements
 ============

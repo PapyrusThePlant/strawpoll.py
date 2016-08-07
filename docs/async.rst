@@ -21,4 +21,4 @@ python 3.4 or ``await`` in python 3.5+, like so: ::
 
 
 As you can see async programming has slight syntax nuances between python 3.4
-and python 3.5+. **It is highly recommended to use python 3.5.+**
+and python 3.5+. **It is highly recommended to use python 3.5+.**
