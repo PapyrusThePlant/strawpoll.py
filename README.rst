@@ -2,26 +2,40 @@
 strawpoll.py
 ============
 
-|docbadge|_
+..
+    Note that the badges will lose the target url if kept in the .svg format,
+    except readthedocs' one, because reasons.
+
+.. image:: https://img.shields.io/pypi/pyversions/strawpoll.py.png
+    :target: pypi_
+
+.. image:: https://img.shields.io/pypi/v/strawpoll.py.png
+    :target: pypi_
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.png
+    :target: license_
+
+.. image:: https://readthedocs.org/projects/strawpollpy/badge/
+    :target: documentation_
 
 strawpoll.py is an async wrapper for `strawpoll's API`_ written in Python.
 
 For more info, take a look at the documentation_.
 
-.. |docbadge| image:: https://readthedocs.org/projects/strawpollpy/badge/
-.. _docbadge: documentation_
-
-.. _strawpoll's API:  https://strawpoll.zendesk.com/hc/en-us/articles/218979828-Straw-Poll-API-Information
 .. _documentation: http://strawpollpy.readthedocs.io/
+.. _license: https://raw.githubusercontent.com/PapyrusThePlant/strawpoll.py/master/LICENSE
+.. _pypi: https://pypi.python.org/pypi/strawpoll.py/
+.. _strawpoll's API:  https://strawpoll.zendesk.com/hc/en-us/articles/218979828-Straw-Poll-API-Information
 
-Requirements
+Installation
 ============
 
-* Python 3.4.2+
-* ``aiohttp`` library
+::
 
-Example
-=======
+    $ pip install strawpoll.py
+
+Usage
+=====
 
 ::
 

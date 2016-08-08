@@ -4,7 +4,7 @@
 """
 
 __title__ = 'strawpoll.py'
-__version__ = '0.1.0-preview'
+__version__ = '0.1.0'
 __author__ = 'PapyrusThePlant'
 __license__ = 'MIT'
 __url__ = 'https://github.com/PapyrusThePlant/strawpoll.py'
