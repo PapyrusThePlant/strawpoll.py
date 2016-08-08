@@ -42,7 +42,7 @@ class API:
         :raises HTTPException: Requesting the poll failed.
 
         :returns: A poll constructed with the requested data.
-        :rtype: Poll
+        :rtype: :class:`Poll`
         """
         if isinstance(arg, str):
             # Maybe we received an url to parse
@@ -59,13 +59,14 @@ class API:
 
         Submits a poll on strawpoll.
 
-        :param Poll poll: The poll to submit.
+        :param poll: The poll to submit.
+        :type poll: :class:`Poll`
 
         :raises ExistingPoll: This poll instance has already been submitted.
         :raises HTTPException: The submission failed.
 
-        :returns: The poll updated with the data sent back from the submission.
-        :rtype: Poll
+        :returns: The given poll updated with the data sent back from the submission.
+        :rtype: :class:`Poll`
 
         .. note::
             Only polls that have a non empty title and between 2 and 30 options
