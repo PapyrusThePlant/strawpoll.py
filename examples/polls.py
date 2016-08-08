@@ -2,8 +2,8 @@ import asyncio
 import strawpoll
 
 
-async def main(loop):
-    api = strawpoll.API(loop=loop)
+async def main():
+    api = strawpoll.API()
 
     # Retrieving a poll
     p1 = await api.get_poll(10915632)
@@ -37,5 +37,4 @@ async def main(loop):
     print(p2.url)               # http://www.strawpoll.me/10921552
 
 
-l = asyncio.get_event_loop()
-l.run_until_complete(main(l))
+asyncio.get_event_loop().run_until_complete(main())
