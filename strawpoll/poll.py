@@ -11,17 +11,17 @@ class Poll:
     """Represents a poll from strawpoll.
 
     :param str title: The question that the poll is asking.
-    :param iterable options: An iterable of elements accepting the `str()` \
+    :param iterable options: An iterable of elements accepting the ``str()`` \
     operation.
 
     :cvar int id: The poll ID on strawpoll. If the poll has not \
     been submitted on or retrieved from strawpoll, it's None instead.
     :cvar bool multi: Specifies if the polls accepts multiple votes \
-    from one user. Defaults to `False`.
+    from one user. Defaults to ``False``.
     :cvar str dupcheck: Defines how to handle checking for \
-    duplicate votes. Defaults to `normal`.
+    duplicate votes. Defaults to ``normal``.
     :cvar bool captcha: Specifies if the poll requires users to \
-    pass a captcha to vote. Defaults to `False`.
+    pass a captcha to vote. Defaults to ``False``.
     """
     def __init__(self, title, options, **kwargs):
         self.title = title
