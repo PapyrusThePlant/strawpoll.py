@@ -20,7 +20,8 @@ with open('strawpoll/__about__.py') as fp:
 # Utility aliases
 
 if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
+    os.system('python setup.py sdist bdist_wheel')
+    os.system('twine upload dist/*')
     sys.exit()
 
 if sys.argv[-1] == 'info':
@@ -49,14 +50,13 @@ setup(name=about['__title__'],
       keywords=about['__title__'],
       zip_safe = False,
       classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities'
       ]
