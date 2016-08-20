@@ -29,6 +29,9 @@ API
 .. autoclass:: API
     :members:
 
+.. autoclass:: RequestsPolicy
+    :inherited-members:
+
 Poll
 ----
 

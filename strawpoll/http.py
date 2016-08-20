@@ -18,9 +18,11 @@ log = logging.getLogger(__name__)
 
 
 class RequestsPolicy(Enum):
-    """An enumeration representing the """
+    """An enumeration of the requests' policies."""
     asynchronous = 0
+    """The asynchronous policy."""
     synchronous = 1
+    """The synchronous policy."""
 
 
 class HTTPClient:
