@@ -4,6 +4,7 @@
 """
 
 __title__ = 'strawpoll.py'
+__description__ = 'A python wrapper for the Strawpoll API.'
 __version__ = '0.1.0'
 __author__ = 'PapyrusThePlant'
 __license__ = 'MIT'

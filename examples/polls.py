@@ -15,6 +15,7 @@ async def main():
     # Displaying its info
     print(p1.id)                # 10915632
     print(p1.url)               # http://www.strawpoll.me/10915632
+    print(p1.title)             # awesome?
     print(p1.results())         # [('fuck yes', 1), ('yes', 0)]
     print(p1.options)           # ['yes', 'fuck yes']
     print(p1.votes)             # [0, 1]
@@ -32,7 +33,7 @@ async def main():
     print(p2.url)               #
 
     # Submitting it on strawpoll
-    await api.submit_poll(p2)
+    p2 = await api.submit_poll(p2)
     print(p2.id)                # 10921552
     print(p2.url)               # http://www.strawpoll.me/10921552
 

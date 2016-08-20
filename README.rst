@@ -37,7 +37,7 @@ Installation
 Usage
 =====
 
-::
+.. code :: py
 
     import asyncio
     import strawpoll

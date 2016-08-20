@@ -8,7 +8,7 @@ import re
 
 import strawpoll.poll
 from .errors import *
-from .http import HTTPClient
+from .http import HTTPClient, RequestsPolicy
 
 
 class API:
@@ -24,20 +24,24 @@ class API:
 
     _url_re = re.compile('^{}\/(?P<id>[0-9]+)(/r)?$'.format(_BASE_URL.replace('/', '\/')))
 
-    def __init__(self, *, loop=None):
+    def __init__(self, *, loop=None, requests_policy=RequestsPolicy.asynchronous):
         self.loop = loop if loop is not None else asyncio.get_event_loop()
-        self._http_client = HTTPClient(loop)
+        self._http_client = HTTPClient(loop, requests_policy=requests_policy)
 
     def __del__(self):
         del self._http_client
 
-    @asyncio.coroutine
-    def get_poll(self, arg):
-        """|coroutine|
+    @property
+    def requests_policy(self):
+        return self._http_client.requests_policy
 
-        Retrieves a poll from strawpoll.
+    def get_poll(self, arg, *, request_policy=None):
+        """Retrieves a poll from strawpoll.
 
         :param arg: Either the ID of the poll or its strawpoll url.
+        :param request_policy: Overrides :attr:`API.requests_policy` for that \
+        request.
+        :type request_policy: Optional[:class:`RequestsPolicy`]
 
         :raises HTTPException: Requesting the poll failed.
 
@@ -50,17 +54,18 @@ class API:
             if match:
                 arg = match.group('id')
 
-        data = yield from self._http_client.get('{}/{}'.format(self._POLLS, arg))
-        return strawpoll.poll.Poll(**data)
+        return self._http_client.get('{}/{}'.format(self._POLLS, arg),
+                                     request_policy=request_policy,
+                                     cls=strawpoll.Poll)
 
-    @asyncio.coroutine
-    def submit_poll(self, poll):
-        """|coroutine|
-
-        Submits a poll on strawpoll.
+    def submit_poll(self, poll, *, request_policy=None):
+        """Submits a poll on strawpoll.
 
         :param poll: The poll to submit.
         :type poll: :class:`Poll`
+        :param request_policy: Overrides :attr:`API.requests_policy` for that \
+        request.
+        :type request_policy: Optional[:class:`RequestsPolicy`]
 
         :raises ExistingPoll: This poll instance has already been submitted.
         :raises HTTPException: The submission failed.
@@ -84,5 +89,7 @@ class API:
             'captcha': poll.captcha
         }
 
-        data = yield from self._http_client.post(self._POLLS, data=data)
-        poll.id = data['id']
+        return self._http_client.post(self._POLLS,
+                                      data=data,
+                                      request_policy=request_policy,
+                                      cls=strawpoll.Poll)

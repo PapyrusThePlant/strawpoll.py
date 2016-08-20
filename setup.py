@@ -39,7 +39,7 @@ with open('README.rst') as fp:
 
 setup(name=about['__title__'],
       version=about['__version__'],
-      description='An async python wrapper for the Strawpoll API.',
+      description=about['description'],
       long_description=long_description,
       author=about['__author__'],
       license=about['__license__'],
@@ -48,7 +48,7 @@ setup(name=about['__title__'],
       include_package_data=True,
       install_requires=install_requires,
       keywords=about['__title__'],
-      zip_safe = False,
+      zip_safe=False,
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
@@ -60,4 +60,4 @@ setup(name=about['__title__'],
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities'
       ]
-)
+      )

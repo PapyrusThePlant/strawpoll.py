@@ -8,7 +8,9 @@ python 3.4 or defined with ``async def`` in python 3.5+.
 
 Coroutines are not like regular functions, if you invoke it as usual, it will
 not be executed. The proper way to call a coroutine is to use ``yield from`` in
-python 3.4 or ``await`` in python 3.5+, like so: ::
+python 3.4 or ``await`` in python 3.5+, like so:
+
+.. code :: py
 
     # With python 3.4
     @asyncio.coroutine
