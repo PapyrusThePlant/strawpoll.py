@@ -27,6 +27,12 @@ For more info, take a look at the documentation_.
 .. _pypi: https://pypi.python.org/pypi/strawpoll.py/
 .. _strawpoll's API:  https://strawpoll.zendesk.com/hc/en-us/articles/218979828-Straw-Poll-API-Information
 
+Is this project dead?
+=====================
+
+No, it is not dead, I am still around, there just isn't much to do until either Strawpoll update
+their api or someone stumbles upon this package and finds an issue with it.
+
 Installation
 ============
 

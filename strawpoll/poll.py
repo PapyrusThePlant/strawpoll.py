@@ -71,7 +71,7 @@ class Poll:
         """
         if self.id is None:
             return ''
-        return '{}/{}'.format(strawpoll.api.API._BASE_URL, self.id)
+        return '{}/{}'.format(strawpoll.API._BASE_URL, self.id)
 
     def results(self, limit=None):
         """Returns a list of tuples each containing a string representing an
