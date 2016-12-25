@@ -5,7 +5,7 @@
 
 __title__ = 'strawpoll.py'
 __description__ = 'A python wrapper for the Strawpoll API.'
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 __author__ = 'PapyrusThePlant'
 __license__ = 'MIT'
 __url__ = 'https://github.com/PapyrusThePlant/strawpoll.py'

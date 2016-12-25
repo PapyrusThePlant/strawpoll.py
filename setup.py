@@ -15,7 +15,7 @@ except ImportError:
 
 about = {}
 with open('strawpoll/__about__.py') as fp:
-    exec(fp.read(), about)
+    exec(fp.read(), None, about)
 
 # Utility aliases
 
@@ -39,7 +39,7 @@ with open('README.rst') as fp:
 
 setup(name=about['__title__'],
       version=about['__version__'],
-      description=about['description'],
+      description=about['__description__'],
       long_description=long_description,
       author=about['__author__'],
       license=about['__license__'],
