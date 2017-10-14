@@ -55,7 +55,7 @@ Usage
         print(p1.results())
 
         p2 = strawpoll.Poll('lol?', ['ha', 'haha', 'hahaha', 'hahahaha', 'hahahahaha'])
-        await api.submit_poll(p2)
+        p2 = await api.submit_poll(p2)
         print(p2.url)
 
     asyncio.get_event_loop().run_until_complete(main())
