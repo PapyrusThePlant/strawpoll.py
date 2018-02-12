@@ -37,12 +37,14 @@ class HTTPClient:
         self.default_headers = {'User-Agent': user_agent}
 
         # Prepare the sessions
-        self.session_async = aiohttp.ClientSession(loop=loop, headers=self.default_headers)
+        if self.requests_policy == RequestsPolicy.asynchronous:
+            self.session_async = aiohttp.ClientSession(loop=loop, headers=self.default_headers)
         self.session_sync = requests.Session()
         self.session_sync.headers = self.default_headers
 
     def __del__(self):
-        self.session_async.close()
+        if self.requests_policy == RequestsPolicy.asynchronous:
+            self.session_async.close()
         self.session_sync.close()
 
     @asyncio.coroutine
