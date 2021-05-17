@@ -18,7 +18,7 @@ class API:
     `None`, which will grab the default event loop instead.
     """
 
-    _BASE_URL = 'http://www.strawpoll.me'
+    _BASE_URL = 'https://www.strawpoll.me'
     _BASE_API = _BASE_URL + '/api/v2'
     _POLLS = _BASE_API + '/polls'
 
